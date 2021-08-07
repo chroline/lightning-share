@@ -1,7 +1,6 @@
-import React from "react";
-
-import { Box, Button, HStack, Stack, Text } from "@chakra-ui/react";
+import { Box, HStack, Stack, Text } from "@chakra-ui/react";
 import { HeartIcon } from "@heroicons/react/solid";
+import React from "react";
 
 export const Footer = () => (
   <Stack
@@ -21,9 +20,9 @@ export const Footer = () => (
       </Box>
       <Text>by Cole Gawin</Text>
     </HStack>
-    <Text display={{ base: "none", sm: "block" }}>•</Text>
+    {/*<Text display={{ base: "none", sm: "block" }}>•</Text>
     <Button as={"a"} variant={"link"} href={"https://projects.colegaw.in/lighting-share"} target={"_blank"}>
       Read about Lightning Share
-    </Button>
+    </Button>*/}
   </Stack>
 );
