@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+html,
+body,
+#app {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+*:not(.chakra-portal *) {
+  box-sizing: border-box;
+  /* transition: all 0.2s ease; */
+}
+
+.filepond--wrapper input {
+  display: none;
+}
