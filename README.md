@@ -1,1 +1,1 @@
-lighting-share-vite
+![LIGHTNING SHARE](assets/thumbnail.png)
