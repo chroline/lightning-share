@@ -33,7 +33,7 @@
 
 <br />
   
-### [Check it out](https://lightning-share.vercel.app) | [Learn how it's made](/#) | [Support the project](/#)
+### [Check it out](https://lightning-share.vercel.app) | [Learn how it's made](/#) | [Support the project](https://github.com/chroline/lightning-share#%EF%B8%8F-support-this-project)
   
 </div>
 
