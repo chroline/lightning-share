@@ -46,3 +46,9 @@
 # 👋 Introduction
 
 LIGHTNING SHARE is a file hosting and sharing service powered by [Firebase](https://firebase.google.com). Users can upload files under 20MB and download hosted files using a "share code" (a short 3 word code provided by [words-aas](https://words-aas.vercel.app)). After uploading a file, the file uploader can retrieve the share code and share it with others or delete the file at any time. Files will automatically be deleted after 21 days (WIP).
+
+# 💻 Usage
+
+|**Upload** | **Download** |
+|---|---|
+|![Uploading a file](https://raw.githubusercontent.com/chroline/lightning-share/main/assets/upload.gif)|![Downloading a file](https://raw.githubusercontent.com/chroline/lightning-share/main/assets/download.gif)|
