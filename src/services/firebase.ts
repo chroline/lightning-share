@@ -6,8 +6,14 @@ import firebaseConfig from "../util/firebase-config";
 import UserDataService from "./user-data";
 
 namespace FirebaseService {
+  /**
+   * Firebase application reference
+   */
   let _app: import("@firebase/app").FirebaseApp;
 
+  /**
+   * Id of user
+   */
   export const userId$ = new BehaviorSubject<string | undefined>(undefined);
 
   /**
