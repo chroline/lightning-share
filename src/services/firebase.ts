@@ -19,7 +19,6 @@ namespace FirebaseService {
   /**
    * Initialize Firebase.
    *
-   * Lazy-imports Firebase packages to shrink initial load size.
    * Initializes Firebase using {@link firebaseConfig}
    */
   export async function init() {
