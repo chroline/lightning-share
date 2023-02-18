@@ -13,6 +13,7 @@
     "@heroicons/react": "^2.0.15",
     "constate": "^3.3.0",
     "filepond": "^4.28.2",
+    "filepond-plugin-image-preview": "^4.6.11",
     "firebase": "9.0.0-beta.7",
     "framer-motion": "^4.1.17",
     "preact": "^10.5.13",

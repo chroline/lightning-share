@@ -12,6 +12,9 @@ import {
   ModalHeader,
   ModalOverlay,
 } from "@chakra-ui/react";
+import { registerPlugin } from "filepond";
+import FilePondPluginImagePreview from "filepond-plugin-image-preview";
+import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
 import { useAsyncFn } from "react-use";
 
 import { useViewController } from "../ViewController";
@@ -20,6 +23,7 @@ import FileService from "../services/file";
 import toast from "../util/toast";
 
 const FilePond = lazy(async () => (await import("react-filepond")).FilePond);
+registerPlugin(FilePondPluginImagePreview);
 
 export default function UploadView({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [, setView] = useViewController();
