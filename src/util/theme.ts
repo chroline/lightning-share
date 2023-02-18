@@ -2,7 +2,7 @@ import { ThemeConfig } from "@chakra-ui/react";
 import { createBreakpoints, mode } from "@chakra-ui/theme-tools";
 
 const fonts = {
-  body: `'Inter', sans-serif`,
+  body: `'IBM Plex Sans', sans-serif`,
   heading: `'Space Grotesk', monospace`,
   mono: `'Menlo', monospace`,
 };

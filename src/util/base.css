@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap");
 
 html,
 body,
 #app {
-  font-family: "Inter", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   margin: 0;
   height: 100%;
@@ -19,4 +19,8 @@ body,
 
 .filepond--wrapper input {
   display: none;
+}
+
+.filepond--root {
+  font-family: inherit !important;
 }
