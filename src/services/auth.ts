@@ -70,20 +70,38 @@ class AuthService {
         const prevUserId = this.userId$.value;
         this.userId$.next(userId);
 
-        const redirectResult = await getRedirectResult(auth);
-        if (redirectResult) {
-          const addlUserInfo = getAdditionalUserInfo(redirectResult);
+        try {
+          const redirectResult = await getRedirectResult(auth);
+          if (redirectResult) {
+            const addlUserInfo = getAdditionalUserInfo(redirectResult);
 
-          if (addlUserInfo?.isNewUser) {
-            await UserDataService.I.seed();
+            if (addlUserInfo?.isNewUser) {
+              await UserDataService.I.seed();
+            }
+
+            !prevUserId &&
+              toast({
+                title: "Successfully signed in!",
+                status: "success",
+                isClosable: true,
+              });
           }
-
-          !prevUserId &&
+        } catch (e) {
+          if (e.code === "auth/account-exists-with-different-credential") {
             toast({
-              title: "Successfully signed in!",
-              status: "success",
+              title: "Whoops! You already have an account.",
+              description: "Try signing in with the original method you used to sign up.",
+              status: "error",
               isClosable: true,
             });
+          } else {
+            toast({
+              title: "Error signing in",
+              description: e.message,
+              status: "error",
+              isClosable: true,
+            });
+          }
         }
       }
     });

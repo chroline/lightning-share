@@ -110,8 +110,18 @@ export default function AuthView({ isOpen, onClose }: { isOpen: boolean; onClose
                     icon={<GoogleIcon h={5} />}
                     onClick={() => signInFn("google")}
                   />
-                  <_SignInBtn name={"Github"} color={"purple"} icon={<GithubIcon h={5} />} onClick={() => {}} />
-                  <_SignInBtn name={"Apple"} color={"gray"} icon={<AppleIcon h={5} />} onClick={() => {}} />
+                  <_SignInBtn
+                    name={"Github"}
+                    color={"purple"}
+                    icon={<GithubIcon h={5} />}
+                    onClick={() => signInFn("github")}
+                  />
+                  <_SignInBtn
+                    name={"Apple"}
+                    color={"gray"}
+                    icon={<AppleIcon h={5} />}
+                    onClick={() => signInFn("apple")}
+                  />
                 </HStack>
                 <Text
                   fontWeight={"medium"}
