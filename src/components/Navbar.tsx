@@ -14,7 +14,7 @@ export const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <HStack h={20} w={"full"} px={{ base: 4, sm: 8 }} justify={"space-between"} flexShrink={0}>
+    <Box display={"flex"} h={20} w={"full"} px={{ base: 4, sm: 8 }} justifyContent={"space-between"} flexShrink={0}>
       <HStack>
         <IconButton
           aria-label={"Toggle color mode"}
@@ -35,21 +35,23 @@ export const Navbar = () => {
           onClick={() => setView({ slug: "auth" })}
         />
       </HStack>
-      <HStack spacing={{ base: 0, sm: 4 }} position={"absolute"} left={"50%"} transform={"translateX(-50%)"}>
+      <HStack h={20} spacing={{ base: 0, sm: 4 }} position={"absolute"} left={"50%"} transform={"translateX(-50%)"}>
         <Box w={10}>{colorMode === "dark" ? <LogoWhite /> : <LogoColor />}</Box>
         <Heading fontSize={"2xl"} fontWeight={"bold"} display={{ base: "none", sm: "block" }}>
           LIGHTNING SHARE
         </Heading>
       </HStack>
-      <IconButton
-        aria-label={"Toggle color mode"}
-        icon={
-          <Box w={6}>
-            {colorMode !== "dark" ? <SunIcon sx={{ strokeWidth: 2 }} /> : <MoonStarsIcon sx={{ strokeWidth: 2 }} />}
-          </Box>
-        }
-        onClick={toggleColorMode}
-      />
-    </HStack>
+      <HStack h={20}>
+        <IconButton
+          aria-label={"Toggle color mode"}
+          icon={
+            <Box w={6}>
+              {colorMode !== "dark" ? <SunIcon sx={{ strokeWidth: 2 }} /> : <MoonStarsIcon sx={{ strokeWidth: 2 }} />}
+            </Box>
+          }
+          onClick={toggleColorMode}
+        />
+      </HStack>
+    </Box>
   );
 };
